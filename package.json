@@ -1,0 +1,14 @@
+{
+  "name": "judlup-calc",
+  "version": "0.1.10",
+  "description": "Calc 4 test",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "calc"
+  },
+  "author": "Judlup Luna",
+  "license": "GPL-3.0",
+  "bin": {
+    "calc": "./bin/calc"
+  }
+}
