@@ -1,6 +1,9 @@
 //var calc = require("judlup-calc");
 var calc = require("../index.js");
 
+const log = console.log;
+
+//Print default message
 calc.printMsg();
 
 //Add
