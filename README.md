@@ -12,6 +12,20 @@ Output:
 
 ` ···Judlup Calc··· `
 
+Run
+
+`calc  + 1 2 `  or `calc  add 1 2 `
+
+Output:
+
+```
+···Judlup Calc···
++**********+
+| result 3 |
++**********+
+```
+
+
 ### Example
 
 ```
