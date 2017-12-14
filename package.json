@@ -1,6 +1,6 @@
 {
   "name": "judlup-calc",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Calc 4 test",
   "main": "index.js",
   "scripts": {

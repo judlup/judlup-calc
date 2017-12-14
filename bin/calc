@@ -8,7 +8,7 @@ const chalk = require('chalk');
 const program = require('commander');
 
 program
-  .version('0.1.0')
+  .version('0.1.16')
 
 //node index.js add 1 2 -s hola
 program
