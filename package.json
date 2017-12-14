@@ -1,6 +1,6 @@
 {
   "name": "judlup-calc",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Calc 4 test",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,9 @@
   "license": "GPL-3.0",
   "bin": {
     "calc": "./bin/calc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/judlup/judlup-calc.git"
   }
 }
