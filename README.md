@@ -4,7 +4,10 @@ A node Calc npm module, testing bin option
 Install
 ` npm install judlup-calc -g`
 
-Run after installed
+
+## CLI
+
+Run 
 
 `calc ` 
 
@@ -20,11 +23,51 @@ Output:
 
 ```
 ···Judlup Calc···
-+**********+
-| result 3 |
-+**********+
++**************+
+| Add result 3 |
++**************+
 ```
 
+Run
+
+`calc  - 1 2 `  or `calc  subs 2 1 `
+
+Output:
+
+```
+···Judlup Calc···
++***************+
+| Subs result 1 |
++***************+
+```
+
+Run
+
+`calc  m 1 2 `  or `calc  mult 3 2 `
+
+Output:
+
+```
+···Judlup Calc···
++***************+
+| Mult result 6 |
++***************+
+```
+
+Run
+
+`calc  / 1 2 `  or `calc  div 3 2 `
+
+Output:
+
+```
+···Judlup Calc···
++***************+
+| Div result 6 |
++***************+
+```
+
+## Library
 
 ### Example
 

@@ -7,23 +7,64 @@ const chalk = require('chalk');
 
 const program = require('commander');
 
+const calc = require('../index.js')
+
 program
-  .version('0.1.16')
+  .version('0.1.17')
 
 //node index.js add 1 2 -s hola
 program
   .command('add [first_value] [second_value]')
   .alias('+')
-  .usage('<keywords> <keywords2>')
-  .description('run setup commands for all envs')
+  .description('Add event to 2 variables')
   //Option pass -X args
-  .option("-s, --setup_mode [mode]", "Which setup mode to use")
+  //.option("-s, --setup_mode [mode]", "Which setup mode to use")
   //Action pass command args
   .action(function(first_value,second_value, options){    
-    var mode = options.setup_mode;
-    console.log(chalk.hex('#444444').bold("+**********+"));    
-    console.log(chalk.hex('#444444').bold('|'),chalk.yellow("result")	,chalk.red(parseInt(first_value)+parseInt(second_value)),chalk.hex('#444444').bold('|'));
-    console.log(chalk.hex('#444444').bold("+**********+"));        
+    //var mode = options.setup_mode;
+    var add = calc.add(parseInt(first_value),parseInt(second_value));
+    console.log(chalk.hex('#444444').bold("+***************+"));    
+    console.log(chalk.hex('#444444').bold('|'),chalk.yellow("Add result")	,chalk.red(add),chalk.hex('#444444').bold('|'));
+    console.log(chalk.hex('#444444').bold("+***************+"));        
+  });
+
+//node index.js subs 1 2 
+program
+  .command('subs [first_value] [second_value]')
+  .alias('-')
+  .description('Substract event to 2 variables')  
+  //Action pass command args
+  .action(function(first_value,second_value, options){    
+    var subs = calc.subs(parseInt(first_value),parseInt(second_value));
+    console.log(chalk.hex('#444444').bold("+***************+"));    
+    console.log(chalk.hex('#444444').bold('|'),chalk.yellow("Subs result")	,chalk.red(subs),chalk.hex('#444444').bold('|'));
+    console.log(chalk.hex('#444444').bold("+***************+"));        
+  });
+
+//node index.js mult 1 2 
+program
+  .command('mult [first_value] [second_value]')
+  .alias('m')
+  .description('Multiply event to 2 variables')  
+  //Action pass command args
+  .action(function(first_value,second_value, options){    
+    var mult = calc.mult(parseInt(first_value),parseInt(second_value));
+    console.log(chalk.hex('#444444').bold("+***************+"));    
+    console.log(chalk.hex('#444444').bold('|'),chalk.yellow("Mult result")	,chalk.red(mult),chalk.hex('#444444').bold('|'));
+    console.log(chalk.hex('#444444').bold("+***************+"));        
+  });
+
+//node index.js div 1 2 
+program
+  .command('div [first_value] [second_value]')
+  .alias('/')
+  .description('Divide event to 2 variables')  
+  //Action pass command args
+  .action(function(first_value,second_value, options){    
+    var div = calc.div(parseInt(first_value),parseInt(second_value));
+    console.log(chalk.hex('#444444').bold("+***************+"));    
+    console.log(chalk.hex('#444444').bold('|'),chalk.yellow("Div result")	,chalk.red(div),chalk.hex('#444444').bold('|'));
+    console.log(chalk.hex('#444444').bold("+***************+"));        
   });
 
 program.parse(process.argv);
